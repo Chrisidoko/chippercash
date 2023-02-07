@@ -1,0 +1,10 @@
+.layout{
+    padding: 0 76px;
+}
+
+@media only screen and (max-width:600px) {
+   .layout{
+    padding: 0 15px;
+   }
+    
+}

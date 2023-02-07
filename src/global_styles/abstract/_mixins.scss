@@ -1,0 +1,60 @@
+@mixin text_grid ($width, $height){
+    display: flex;
+    flex-direction: column;
+    width: $width;
+    height: $height;
+    row-gap: clamp(0.75rem, 1vw + 1rem, 1.5rem);
+    
+}
+
+
+@mixin text_head ($color) {
+    font-size: clamp(2.063rem, 3vw + 1rem, 3.125rem); // 2.275 3.125rem;
+    line-height: clamp(2.475rem, 3.5vw + 1rem, 3.75rem);
+    letter-spacing: normal;
+    color: $color;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+@mixin text_sub($color){
+    color: $color;
+    font-size: clamp(1.063rem, 3vw + 1rem, 1.125rem); 
+    line-height:  clamp(1.7rem, 3vw + 1rem, 1.78rem);
+    letter-spacing: normal;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    
+}
+// three next mixins are for fancy text
+@mixin fancy {
+    display: flex;
+    flex-direction: row;
+    align-items: center;  
+    cursor: pointer;    
+}
+@mixin stroke ($color) {
+    width: 1.25rem;
+    height: 0.25rem;
+    background-color: $color;
+    border-radius: 1.5rem;
+    transition: 0.2s ease 0s; 
+}
+
+@mixin fancy_text($color){
+    color: $color;
+    font-size: 1.125rem;
+    line-height: 1.8rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    padding-left: 0.8rem;
+}
+
+//mixin for center burna text
+
+@mixin burna_mid {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;      
+}

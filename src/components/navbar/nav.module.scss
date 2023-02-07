@@ -1,0 +1,222 @@
+@import "../../global_styles/helper.scss";
+
+.header {
+    background-color: #222654;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    padding: 0 76px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    container-type: inline-size; //new container queries feature
+    //container-name: head;
+}
+
+// responsive
+@media only screen and (max-width: 1010px) {
+    .header {
+        height: 64px;
+        width: 100%;
+    }
+}
+//responsive container query for Header
+@container (max-width: 850px) {
+    nav {
+        display: none;
+    }
+    button {
+        display: none;
+    }
+    .wrapper{
+        display: block;
+    }
+
+}
+@container (min-width: 850px) {
+
+    .wrapper{
+        display: none;
+    }
+
+}
+// Drawer Classes Start
+
+// hamburber
+.wrapper {
+    
+    opacity: 0.8;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 1;
+
+    }
+}
+
+.hamburger {
+    width: 28px;
+    height: 2px;
+    border-Radius: 1px;
+    background-color: #ffffff;
+    transition: all 0.5s ease-in-out;
+
+
+
+
+    &::before {
+        content: " ";
+        position: absolute;
+        width: 28px;
+        height: 2px;
+        background-color: #ffffff;
+        border-Radius: 1px;
+        transition: all 0.5s ease-in-out;
+        transform: translateY(-7px);
+    }
+
+    &::after {
+        content: " ";
+        position: absolute;
+        width: 28px;
+        height: 2px;
+        background-color: #ffffff;
+        border-Radius: 1px;
+        transition: all 0.5s ease-in-out;
+        transform: translateY(7px);
+    }
+}
+// active Hamburge
+.activeHamburger {
+    width: 28px;
+    height: 2px;
+    border-Radius: 1px;
+    transform: translateX(-50px);
+    background-color: transparent;
+    transition: all 0.5s ease-in-out;
+   // opacity: 0.8;
+   
+    &::before {
+      content: " ";
+      position: absolute;
+      width: 28px;
+      height: 2px;
+      background-color: #ffffff;
+      border-Radius: 1px;
+      transition: all 0.5s ease-in-out;
+      transform: rotate(45deg) translate(35px, -35px);
+    }
+    
+    &::after {
+      content: " ";
+      position: absolute;
+      width: 28px;
+      height: 2px;
+      background-color: #ffffff;
+      border-Radius: 1px;
+      transition: all 0.5s ease-in-out;
+      transform: rotate(-45deg) translate(35px, 35px);
+    }
+  }
+
+  /*.sidenav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100vh;
+    background-color: red;
+   transform: translateX(100%);
+    transition: all 0.5s ease-in-out;
+    z-index: 101;
+  }
+  .activeSidenav {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    width: 40%;
+    height: 100vh;
+    background-color:red;
+    transform: translateX(50%);
+    transition: all 0.5s ease-in-out;
+    z-index: 101;
+  }
+*/
+  // Drawer Classes End
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+    width: 133px;
+    height: 30px;
+}
+
+.links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+    li {
+        padding-right: 42px;
+        display: flex;
+        align-items: center;
+
+        a {
+            position: relative;
+            margin-right: 6px;
+
+        }
+
+        a:after {
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            content: "";
+            height: 2px;
+            width: 0%;
+            background-color: rgba(255, 255, 255, 0.8);
+            display: block;
+            transition: 0.4s ease-in-out 0s;
+            //padding 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s; 
+
+        }
+
+        a:hover:after {
+            height: 2px;
+            width: 100%;
+        }
+
+    }
+
+}
+
+a {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: normal;
+    line-height: 1.5;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+
+
+}
+
+// transition: all 0.5s ease 0s
+button {
+    border: 1px solid #A19CDC;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out 0s, border-color 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s;
+    padding: 0.675rem 1.125rem;
+    background-color: transparent;
+
+
+    &:hover {
+        background-color: #a19cdc;
+        color: #ffffff;
+    }
+}

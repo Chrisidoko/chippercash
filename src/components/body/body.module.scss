@@ -1,0 +1,306 @@
+@import "../../global_styles/helper.scss";
+
+.con_1 {
+    position: relative;
+    height: 57.8vw;
+    width: 100%;
+    background-color: rgba(188, 192, 234, 0.4);
+    padding-top: 5.6vw;
+    
+
+}
+.flex1{
+    display: flex;
+    flex-direction: row;
+   // justify-content: space-between;
+    height: 30.7vw;
+    width: 100%;
+    align-items: center
+}
+
+.grid {
+    flex: 1 1 0px; //for equal flex grow and shrink
+    @include text_grid (490px, 303px);
+    
+
+    .head {
+        @include text_head (#2C1644);
+        opacity: 0.9;
+    }
+
+    .sub {
+        @include text_sub(#2C1644);
+        opacity: 0.9;
+    }
+    //responsive grid
+@media only screen and (min-width: 1010px) {
+
+    .sub {
+        margin-right: 6.7vw  //to be reviewed 
+    }
+}
+}
+
+
+
+.fancy1 {
+    @include fancy;
+
+    .stroke1 {
+        @include stroke( #6944d8);    
+    }
+
+    .fancy_text1 {
+        @include fancy_text( #6944d8);  
+    }
+
+    &:hover {
+        .stroke1 {
+            width: 0.25rem;
+            height: 1.25rem;
+            margin-left: 0.8rem;
+        }
+
+    }
+
+}
+.img1{
+    
+    width: 50%;
+    height: 100%; 
+    
+    
+}
+.countries{
+  position: relative;
+  width: 100%;
+  height: 261px;
+  padding: 64px 0px;
+  
+
+  .text1{
+    color:#2c1644;
+    font-size: 1.125rem;
+    line-height: 1.8rem;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    opacity: 0.9;
+  }
+
+}
+
+.con_2{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.625rem;
+    gap: 3.688rem;
+    overflow: hidden; 
+   
+
+    .country{       
+        width: 180px; //have to work on this with container breakpoints
+        height: 80px;
+        border-radius: 0.75rem;       
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: cover;
+        cursor: default;
+       
+        
+ 
+
+        &:hover{
+            span{
+            z-index: 2;
+           }
+        }
+       
+        span{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #bcc0ea;
+            width: 100%;
+            height: 100%;
+            border-radius: 0.75rem;  
+            font-size:  1.113rem;
+            line-height: 1.78rem;
+            color: #1B0A2D;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 600;
+            text-align: center;
+            z-index: -1;
+            transition: 0.3s ease-in-out 0s; 
+        }
+      }
+}
+
+// Burna Boy section
+
+// container
+.burna{
+  position: relative;
+  height: 747px; 
+  width: 100%;
+  background-color: #ffffff;
+
+ // padding: 4rem 0;
+}
+
+.first{
+    height: 60%;
+   // border: #6944d8 solid 1px;
+    background-color: rgba(188, 192, 234, 0.4);
+     
+    .burna_flex{
+        @include burna_mid;
+        padding: 4rem 0;
+        
+        
+
+        span{
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            
+        }
+
+        .b_head{
+           font-size: 2rem;
+           line-height: 2.5rem;
+           color: #2c1644;
+           font-weight: 600;
+        }
+        .b_sub{
+            margin-top: 1rem;
+            width: 624px;
+            font-size: 1.125rem;
+            line-height: 1.8rem;
+            color: #1b0a2d;
+            opacity: 0.9;
+        }
+            
+
+    }
+
+}
+
+.video{
+    position: relative;
+    margin-top: 3rem;
+    background-color: hsl(200, 20%, 95%);
+    width: 58vw;
+    height: 29vw;
+    border-radius: 1.125rem;
+    box-shadow: 0 0.375rem 0.375rem rgb(27 10 45 / 5%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: cover;
+    
+
+   .play_icon{
+    position: absolute;
+    left: 45%;
+    top: 39%;
+    color: white; 
+    font-size: 5.25rem;
+   }
+}
+
+// 4th container start
+.fourth {
+    position: relative;
+    margin-top: 18vw;
+    height: 398px;
+    width: 100%;
+   // border: #6944d8 solid 1px;
+
+    .horizontal{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;  
+        height: 28vw;
+        width: 100%; 
+        padding: 80px 0;
+    }
+    
+    // grid class 
+    .grid2 {      
+       //padding-right: 64px;
+        @include text_grid (426px, 211px);
+        
+    
+        .head {
+            @include text_head (#2C1644);
+            opacity: 0.9;
+        }
+    
+        .sub {
+            @include text_sub(#2C1644);
+            opacity: 0.9;
+        }
+        
+
+    }
+
+    .vertical1{
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+
+    }
+
+
+    .comment {
+        width: 41.9vw;
+        height: 107px;
+        padding: 1.25rem 1.25rem;
+        border-radius: 0.875rem ;
+        border: 0.1px solid rgba(188, 192, 234);
+        box-shadow: rgba(68, 83, 100, 0.1) 0px 12px 4px 0px;
+        display: flex;
+        flex-direction: row;
+        
+        .profile{
+            margin-right: 1rem;
+            width: 2.55rem;
+            height: 2.55rem;
+        }
+
+        .com_flex {
+            display: flex;
+            flex-direction: column;
+            row-gap: 0.563rem;
+            .com_text {
+                font-size: 0.875rem;
+                line-height: 1.138rem;
+                color: #1b0a2d;
+                opacity: 0.9;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            .com_text2 {
+                font-size: 0.75rem;
+                line-height: 0.975rem;
+                color: #1b0a2d;
+                opacity: 0.6;
+                font-family: 'Roboto', sans-serif;
+            }
+        }
+    }
+}
+// position helper for buttom comment
+.position{
+    margin-left: 40px;
+}
+
+// responsive comment
+@media only screen and (max-width: 1010px) {
+
+    .position{
+        margin-left: 0px;
+        margin-right: 30px;
+    }
+}
